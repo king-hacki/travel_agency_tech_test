@@ -1,5 +1,5 @@
 package com.softserve.travel_agency.model.enums;
 
-public enum  BookedStatus {
+public enum RentStatus {
     BOOKED, ACTIVE, CLOSE, END;
 }
