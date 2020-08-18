@@ -7,6 +7,9 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 import static javax.persistence.EnumType.STRING;
 import static javax.persistence.FetchType.LAZY;
 import static javax.persistence.GenerationType.IDENTITY;
@@ -30,7 +33,7 @@ public class Room {
     @JoinColumn(name = "hotel_id", nullable = false)
     private Hotel hotel;
 
-    @OneToOne(mappedBy = "room", fetch = LAZY)
-    private Rent rent;
+    @OneToMany(mappedBy = "room", fetch = LAZY)
+    private Set<Rent> rents = new LinkedHashSet<>();
 
 }
