@@ -9,8 +9,6 @@ import java.util.List;
 
 public interface UserService {
 
-    Rent bookAvailableRoomOnPeriod(User user, Room availableRoom, Period rentPeriod);
-
     List<User> getAllUsers();
 
 }

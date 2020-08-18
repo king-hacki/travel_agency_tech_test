@@ -6,7 +6,4 @@ import com.softserve.travel_agency.model.Hotel;
 import java.util.List;
 
 public interface CountryService {
-
-    List<Hotel> getAllHotelsInCountry(Country country);
-
 }
